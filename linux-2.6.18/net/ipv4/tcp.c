@@ -275,7 +275,7 @@ DEFINE_SNMP_STAT(struct tcp_mib, tcp_statistics) __read_mostly;
 
 atomic_t tcp_orphan_count = ATOMIC_INIT(0);
 
-EXPORT_SYMBOL_GPXL(tcp_orphan_count);
+EXPORT_SYMBOL_GPL(tcp_orphan_count);
 
 int sysctl_tcp_mem[3] __read_mostly;
 int sysctl_tcp_wmem[3] __read_mostly;

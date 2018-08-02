@@ -120,10 +120,10 @@ struct linux_mib {
  * atomic_inc would be overkill because of the lock cycles). Wants new 
  * nonlocked_atomic_inc() primitives -AK
  */ 
-#define DEFINE_SNMP_STAT(type, name)	\
-	__typeof__(type) *name[2]
-#define DECLARE_SNMP_STAT(type, name)	\
-	extern __typeof__(type) *name[2]
+#define DEFINE_SNMP_STAT(type, name)	/*\
+	__typeof__(type) *name[2]*/
+#define DECLARE_SNMP_STAT(type, name)	/*\
+	extern __typeof__(type) *name[2]*/
 
 #define SNMP_STAT_BHPTR(name)	(name[0])
 #define SNMP_STAT_USRPTR(name)	(name[1])

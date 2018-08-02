@@ -195,14 +195,14 @@ void *__symbol_get_gpl(const char *symbol);
 	__attribute__((section("__ksymtab" sec), unused))	\
 	= { (unsigned long)&sym, __kstrtab_##sym }
 
-#define EXPORT_SYMBOL(sym)					\
-	__EXPORT_SYMBOL(sym, "")
+#define EXPORT_SYMBOL(sym)			/*		\
+	__EXPORT_SYMBOL(sym, "")*/
 
-#define EXPORT_SYMBOL_GPL(sym)					\
-	__EXPORT_SYMBOL(sym, "_gpl")
+#define EXPORT_SYMBOL_GPL(sym)			/*		\
+	__EXPORT_SYMBOL(sym, "_gpl")*/
 
-#define EXPORT_SYMBOL_GPL_FUTURE(sym)				\
-	__EXPORT_SYMBOL(sym, "_gpl_future")
+#define EXPORT_SYMBOL_GPL_FUTURE(sym)			/*	\
+	__EXPORT_SYMBOL(sym, "_gpl_future")*/
 
 
 #ifdef CONFIG_UNUSED_SYMBOLS

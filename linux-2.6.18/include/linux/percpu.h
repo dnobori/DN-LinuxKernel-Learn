@@ -27,11 +27,11 @@ struct percpu_data {
  * alloc_percpu.  Non-atomic access to the current CPU's version should
  * probably be combined with get_cpu()/put_cpu().
  */ 
-#define per_cpu_ptr(ptr, cpu)                   \
+#define per_cpu_ptr(ptr, cpu)/*                   \
 ({                                              \
         struct percpu_data *__p = (struct percpu_data *)~(unsigned long)(ptr); \
         (__typeof__(ptr))__p->ptrs[(cpu)];	\
-})
+})*/
 
 extern void *__alloc_percpu(size_t size);
 extern void free_percpu(const void *);
