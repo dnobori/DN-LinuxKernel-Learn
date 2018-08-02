@@ -1,0 +1,43 @@
+■■ glibc-2.5
+
+■ config.h の用意
+適当なマシン (古い CentOS 5) で実行
+
+cd ~ && rm -fr ~/glibc/ && mkdir -p ~/glibc/ && cd ~/glibc/
+wget http://ftp.riken.jp/GNU/gnu/glibc/glibc-2.5.tar.gz
+tar xzf glibc-2.5.tar.gz
+
+bash
+
+mkdir -p ~/glibc/glibc-2.5-build/
+cd ~/glibc/glibc-2.5-build/
+export LD_LIBRARY_PATH=/usr/local/ssl/lib:/lib:/usr/lib:/usr/local/lib:/opt/sfw/lib:/usr/ccs/lib
+mkdir -p /root/glibc/glibc-2.5-build2/
+../glibc-2.5/configure --prefix=/root/glibc/glibc-2.5-build2/
+
+
+■ Windows 上で実行
+cd /d C:\git\DN-LinuxKernel-Learn\
+wget http://ftp.riken.jp/GNU/gnu/glibc/glibc-2.5.tar.gz
+tar xzf glibc-2.5.tar.gz
+
+config.h を置く
+
+
+vc_project_maker
+
+Include に
+
+$(ProjectDir);$(ProjectDir)\include
+
+を追加
+
+HAVE_CONFIG_H;__STDC__
+を定義
+
+
+
+
+
+
+
