@@ -1,0 +1,4 @@
+#include "linux/generated/autoconf.h"
+/* Hook to call BIOS initialisation function */
+
+/* no action for generic */

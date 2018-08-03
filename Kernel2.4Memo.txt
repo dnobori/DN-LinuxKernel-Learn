@@ -1,0 +1,52 @@
+■■ linux-2.4.5
+
+■ カーネルソースの用意
+適当なマシン (古い CentOS 5) で実行
+
+cd ~ && rm -fr ~/kernel/ && mkdir -p ~/kernel/ && cd ~/kernel/
+wget http://ftp.riken.jp/Linux/kernel/v2.4/linux-2.4.5.tar.gz
+tar xzf linux-2.4.5.tar.gz
+
+mv linux linux-2.4.5
+cd ~/kernel/linux-2.4.5/
+
+make mrproper
+make config
+
+ネットワーク系と ppp 系をすべて ON にする。
+
+make include/config/MARKER
+
+cd ~/kernel/
+
+tar czf linux-2.4.5-configured.tar.gz linux-2.4.5
+
+■ Windows 上で実行
+cd /d C:\git\DN-LinuxKernel-Learn\
+tar xzf linux-2.4.5-configured.tar.gz
+
+include\asm-i386 を include\asm にコピー
+
+すべての *.c, *.h に linux_c_h_add_autoconf_test を追加
+
+cd /d C:\git\DN-LinuxKernel-Learn\linux-2.4.5
+del /f /s /q .gitignore
+
+vc_project_maker
+
+Include に
+
+$(ProjectDir);$(ProjectDir)\include
+
+を追加
+
+__KERNEL__ を定義
+
+Pch を非使用
+
+
+
+
+
+
+
