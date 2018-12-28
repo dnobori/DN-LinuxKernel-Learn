@@ -8,7 +8,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{B9387923-29BF-4A02-A72C-5EB8F9DBA0B4}</ProjectGuid>
+    <ProjectGuid>{86B41405-276A-476B-8A04-E43D3DD51AB6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>linux-2.4.5</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
@@ -4521,6 +4521,7 @@
     <ClInclude Include="scripts\lxdialog\colors.h" />
     <ClInclude Include="scripts\lxdialog\dialog.h" />
     <ClInclude Include="scripts\tkparse.h" />
+
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="arch\alpha\boot\tools\mkbb.c" />
@@ -4793,10 +4794,12 @@
     <ClCompile Include="arch\arm\nwfpe\entry26.S" />
     <ClCompile Include="arch\arm\nwfpe\extended_cpdo.c" />
     <ClCompile Include="arch\arm\nwfpe\fpa11.c" />
+    <ClCompile Include="arch\arm\nwfpe\fpa11.inl" />
     <ClCompile Include="arch\arm\nwfpe\fpa11_cpdo.c" />
     <ClCompile Include="arch\arm\nwfpe\fpa11_cpdt.c" />
     <ClCompile Include="arch\arm\nwfpe\fpa11_cprt.c" />
     <ClCompile Include="arch\arm\nwfpe\fpmodule.c" />
+    <ClCompile Include="arch\arm\nwfpe\fpmodule.inl" />
     <ClCompile Include="arch\arm\nwfpe\fpopcode.c" />
     <ClCompile Include="arch\arm\nwfpe\single_cpdo.c" />
     <ClCompile Include="arch\arm\nwfpe\softfloat.c" />
@@ -8500,6 +8503,7 @@
     <ClCompile Include="scripts\tkcond.c" />
     <ClCompile Include="scripts\tkgen.c" />
     <ClCompile Include="scripts\tkparse.c" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="arch\alpha\boot\bootloader.lds" />
@@ -8546,8 +8550,6 @@
     <None Include="arch\arm\mach-shark\Makefile" />
     <None Include="arch\arm\mm\Makefile" />
     <None Include="arch\arm\nwfpe\ChangeLog" />
-    <None Include="arch\arm\nwfpe\fpa11.inl" />
-    <None Include="arch\arm\nwfpe\fpmodule.inl" />
     <None Include="arch\arm\nwfpe\Makefile" />
     <None Include="arch\arm\nwfpe\softfloat-macros" />
     <None Include="arch\arm\nwfpe\softfloat-specialize" />
@@ -9634,6 +9636,7 @@
     <None Include="scripts\split-include" />
     <None Include="scripts\tail.tk" />
     <None Include="scripts\ver_linux" />
+
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

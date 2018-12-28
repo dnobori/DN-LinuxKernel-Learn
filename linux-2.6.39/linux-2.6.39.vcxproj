@@ -8,7 +8,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F1A4DC09-04CA-41E3-8F89-6E4BB893E475}</ProjectGuid>
+    <ProjectGuid>{E07E9EB5-89F6-49D3-86CB-B4B0DD8C9121}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>linux-2.6.39</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
@@ -17045,6 +17045,7 @@
     <ClInclude Include="virt\kvm\coalesced_mmio.h" />
     <ClInclude Include="virt\kvm\ioapic.h" />
     <ClInclude Include="virt\kvm\iodev.h" />
+
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="arch\alpha\boot\tools\mkbb.c" />
@@ -18818,10 +18819,12 @@
     <ClCompile Include="arch\arm\nwfpe\entry.S" />
     <ClCompile Include="arch\arm\nwfpe\extended_cpdo.c" />
     <ClCompile Include="arch\arm\nwfpe\fpa11.c" />
+    <ClCompile Include="arch\arm\nwfpe\fpa11.inl" />
     <ClCompile Include="arch\arm\nwfpe\fpa11_cpdo.c" />
     <ClCompile Include="arch\arm\nwfpe\fpa11_cpdt.c" />
     <ClCompile Include="arch\arm\nwfpe\fpa11_cprt.c" />
     <ClCompile Include="arch\arm\nwfpe\fpmodule.c" />
+    <ClCompile Include="arch\arm\nwfpe\fpmodule.inl" />
     <ClCompile Include="arch\arm\nwfpe\fpopcode.c" />
     <ClCompile Include="arch\arm\nwfpe\single_cpdo.c" />
     <ClCompile Include="arch\arm\nwfpe\softfloat.c" />
@@ -34374,12 +34377,12 @@
     <ClCompile Include="virt\kvm\iommu.c" />
     <ClCompile Include="virt\kvm\irq_comm.c" />
     <ClCompile Include="virt\kvm\kvm_main.c" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="arch\alpha\boot\bootloader.lds" />
     <None Include="arch\alpha\boot\Makefile" />
     <None Include="arch\alpha\include\asm\Kbuild" />
-    <None Include="arch\alpha\kernel\.gitignore" />
     <None Include="arch\alpha\kernel\Makefile" />
     <None Include="arch\alpha\lib\Makefile" />
     <None Include="arch\alpha\math-emu\Makefile" />
@@ -34391,10 +34394,8 @@
     <None Include="arch\alpha\Makefile" />
     <None Include="arch\arm\boot\bootp\bootp.lds" />
     <None Include="arch\arm\boot\bootp\Makefile" />
-    <None Include="arch\arm\boot\compressed\.gitignore" />
     <None Include="arch\arm\boot\compressed\Makefile" />
     <None Include="arch\arm\boot\compressed\vmlinux.lds.in" />
-    <None Include="arch\arm\boot\.gitignore" />
     <None Include="arch\arm\boot\install.sh" />
     <None Include="arch\arm\boot\Makefile" />
     <None Include="arch\arm\common\Kconfig" />
@@ -34531,7 +34532,6 @@
     <None Include="arch\arm\configs\xcep_defconfig" />
     <None Include="arch\arm\configs\zeus_defconfig" />
     <None Include="arch\arm\include\asm\Kbuild" />
-    <None Include="arch\arm\kernel\.gitignore" />
     <None Include="arch\arm\kernel\Makefile" />
     <None Include="arch\arm\lib\Makefile" />
     <None Include="arch\arm\mach-at91\Kconfig" />
@@ -34742,8 +34742,6 @@
     <None Include="arch\arm\mm\Kconfig" />
     <None Include="arch\arm\mm\Makefile" />
     <None Include="arch\arm\nwfpe\ChangeLog" />
-    <None Include="arch\arm\nwfpe\fpa11.inl" />
-    <None Include="arch\arm\nwfpe\fpmodule.inl" />
     <None Include="arch\arm\nwfpe\Makefile" />
     <None Include="arch\arm\nwfpe\softfloat-macros" />
     <None Include="arch\arm\nwfpe\softfloat-specialize" />
@@ -34794,7 +34792,6 @@
     <None Include="arch\avr32\boards\merisc\Kconfig" />
     <None Include="arch\avr32\boards\merisc\Makefile" />
     <None Include="arch\avr32\boards\mimc200\Makefile" />
-    <None Include="arch\avr32\boot\images\.gitignore" />
     <None Include="arch\avr32\boot\images\Makefile" />
     <None Include="arch\avr32\boot\u-boot\Makefile" />
     <None Include="arch\avr32\configs\atngw100_defconfig" />
@@ -34813,7 +34810,6 @@
     <None Include="arch\avr32\configs\merisc_defconfig" />
     <None Include="arch\avr32\configs\mimc200_defconfig" />
     <None Include="arch\avr32\include\asm\Kbuild" />
-    <None Include="arch\avr32\kernel\.gitignore" />
     <None Include="arch\avr32\kernel\Makefile" />
     <None Include="arch\avr32\lib\Makefile" />
     <None Include="arch\avr32\mach-at32ap\Kconfig" />
@@ -34823,7 +34819,6 @@
     <None Include="arch\avr32\Kconfig" />
     <None Include="arch\avr32\Kconfig.debug" />
     <None Include="arch\avr32\Makefile" />
-    <None Include="arch\blackfin\boot\.gitignore" />
     <None Include="arch\blackfin\boot\install.sh" />
     <None Include="arch\blackfin\boot\Makefile" />
     <None Include="arch\blackfin\configs\BF518F-EZBRD_defconfig" />
@@ -34857,7 +34852,6 @@
     <None Include="arch\blackfin\include\asm\Kbuild" />
     <None Include="arch\blackfin\kernel\cplb-mpu\Makefile" />
     <None Include="arch\blackfin\kernel\cplb-nompu\Makefile" />
-    <None Include="arch\blackfin\kernel\.gitignore" />
     <None Include="arch\blackfin\kernel\Makefile" />
     <None Include="arch\blackfin\lib\Makefile" />
     <None Include="arch\blackfin\mach-bf518\boards\Kconfig" />
@@ -34924,7 +34918,6 @@
     <None Include="arch\cris\boot\rescue\Makefile" />
     <None Include="arch\cris\boot\rescue\rescue_v10.lds" />
     <None Include="arch\cris\boot\rescue\rescue_v32.lds" />
-    <None Include="arch\cris\boot\.gitignore" />
     <None Include="arch\cris\boot\Makefile" />
     <None Include="arch\cris\configs\artpec_3_defconfig" />
     <None Include="arch\cris\configs\etrax-100lx_defconfig" />
@@ -34994,7 +34987,6 @@
     <None Include="arch\ia64\include\asm\Kbuild" />
     <None Include="arch\ia64\kernel\cpufreq\Kconfig" />
     <None Include="arch\ia64\kernel\cpufreq\Makefile" />
-    <None Include="arch\ia64\kernel\.gitignore" />
     <None Include="arch\ia64\kernel\Makefile" />
     <None Include="arch\ia64\kernel\Makefile.gate" />
     <None Include="arch\ia64\kvm\Kconfig" />
@@ -35039,7 +35031,6 @@
     <None Include="arch\m32r\configs\opsput_defconfig" />
     <None Include="arch\m32r\configs\usrv_defconfig" />
     <None Include="arch\m32r\include\asm\Kbuild" />
-    <None Include="arch\m32r\kernel\.gitignore" />
     <None Include="arch\m32r\kernel\Makefile" />
     <None Include="arch\m32r\lib\Makefile" />
     <None Include="arch\m32r\mm\Makefile" />
@@ -35112,7 +35103,6 @@
     <None Include="arch\m68k\ifpsp060\README" />
     <None Include="arch\m68k\ifpsp060\TEST.DOC" />
     <None Include="arch\m68k\include\asm\Kbuild" />
-    <None Include="arch\m68k\kernel\.gitignore" />
     <None Include="arch\m68k\kernel\Makefile" />
     <None Include="arch\m68k\kernel\Makefile_mm" />
     <None Include="arch\m68k\kernel\Makefile_no" />
@@ -35208,7 +35198,6 @@
     <None Include="arch\mips\bcm63xx\Platform" />
     <None Include="arch\mips\boot\compressed\ld.script" />
     <None Include="arch\mips\boot\compressed\Makefile" />
-    <None Include="arch\mips\boot\.gitignore" />
     <None Include="arch\mips\boot\Makefile" />
     <None Include="arch\mips\cavium-octeon\executive\Makefile" />
     <None Include="arch\mips\cavium-octeon\Kconfig" />
@@ -35284,7 +35273,6 @@
     <None Include="arch\mips\jz4740\Platform" />
     <None Include="arch\mips\kernel\cpufreq\Kconfig" />
     <None Include="arch\mips\kernel\cpufreq\Makefile" />
-    <None Include="arch\mips\kernel\.gitignore" />
     <None Include="arch\mips\kernel\Makefile" />
     <None Include="arch\mips\lasat\image\Makefile" />
     <None Include="arch\mips\lasat\image\romscript.normal" />
@@ -35368,7 +35356,6 @@
     <None Include="arch\mips\Makefile" />
     <None Include="arch\mn10300\boot\compressed\Makefile" />
     <None Include="arch\mn10300\boot\compressed\vmlinux.lds" />
-    <None Include="arch\mn10300\boot\.gitignore" />
     <None Include="arch\mn10300\boot\install.sh" />
     <None Include="arch\mn10300\boot\Makefile" />
     <None Include="arch\mn10300\configs\asb2303_defconfig" />
@@ -35396,7 +35383,6 @@
     <None Include="arch\parisc\configs\default_defconfig" />
     <None Include="arch\parisc\hpux\Makefile" />
     <None Include="arch\parisc\include\asm\Kbuild" />
-    <None Include="arch\parisc\kernel\.gitignore" />
     <None Include="arch\parisc\kernel\Makefile" />
     <None Include="arch\parisc\lib\Makefile" />
     <None Include="arch\parisc\math-emu\Makefile" />
@@ -35409,7 +35395,6 @@
     <None Include="arch\parisc\Kconfig.debug" />
     <None Include="arch\parisc\Makefile" />
     <None Include="arch\parisc\nm" />
-    <None Include="arch\powerpc\boot\dtc-src\.gitignore" />
     <None Include="arch\powerpc\boot\dts\acadia.dts" />
     <None Include="arch\powerpc\boot\dts\adder875-redboot.dts" />
     <None Include="arch\powerpc\boot\dts\adder875-uboot.dts" />
@@ -35541,7 +35526,6 @@
     <None Include="arch\powerpc\boot\dts\xpedite5330.dts" />
     <None Include="arch\powerpc\boot\dts\xpedite5370.dts" />
     <None Include="arch\powerpc\boot\dts\yosemite.dts" />
-    <None Include="arch\powerpc\boot\.gitignore" />
     <None Include="arch\powerpc\boot\install.sh" />
     <None Include="arch\powerpc\boot\Makefile" />
     <None Include="arch\powerpc\boot\README" />
@@ -35649,11 +35633,8 @@
     <None Include="arch\powerpc\configs\tqm8xx_defconfig" />
     <None Include="arch\powerpc\configs\wii_defconfig" />
     <None Include="arch\powerpc\include\asm\Kbuild" />
-    <None Include="arch\powerpc\kernel\vdso32\.gitignore" />
     <None Include="arch\powerpc\kernel\vdso32\Makefile" />
-    <None Include="arch\powerpc\kernel\vdso64\.gitignore" />
     <None Include="arch\powerpc\kernel\vdso64\Makefile" />
-    <None Include="arch\powerpc\kernel\.gitignore" />
     <None Include="arch\powerpc\kernel\Makefile" />
     <None Include="arch\powerpc\kernel\prom_init_check.sh" />
     <None Include="arch\powerpc\kernel\systbl_chk.sh" />
@@ -35683,7 +35664,6 @@
     <None Include="arch\powerpc\platforms\8xx\Makefile" />
     <None Include="arch\powerpc\platforms\amigaone\Kconfig" />
     <None Include="arch\powerpc\platforms\amigaone\Makefile" />
-    <None Include="arch\powerpc\platforms\cell\spufs\.gitignore" />
     <None Include="arch\powerpc\platforms\cell\spufs\Makefile" />
     <None Include="arch\powerpc\platforms\cell\spufs\spu_restore_dump.h_shipped" />
     <None Include="arch\powerpc\platforms\cell\spufs\spu_save_dump.h_shipped" />
@@ -35785,13 +35765,11 @@
     <None Include="arch\sh\boards\mach-x3proto\Makefile" />
     <None Include="arch\sh\boards\Kconfig" />
     <None Include="arch\sh\boards\Makefile" />
-    <None Include="arch\sh\boot\compressed\.gitignore" />
     <None Include="arch\sh\boot\compressed\install.sh" />
     <None Include="arch\sh\boot\compressed\Makefile" />
     <None Include="arch\sh\boot\compressed\vmlinux.scr" />
     <None Include="arch\sh\boot\romimage\Makefile" />
     <None Include="arch\sh\boot\romimage\vmlinux.scr" />
-    <None Include="arch\sh\boot\.gitignore" />
     <None Include="arch\sh\boot\Makefile" />
     <None Include="arch\sh\cchips\hd6446x\Makefile" />
     <None Include="arch\sh\cchips\Kconfig" />
@@ -35866,9 +35844,7 @@
     <None Include="arch\sh\kernel\cpu\sh5\Makefile" />
     <None Include="arch\sh\kernel\cpu\shmobile\Makefile" />
     <None Include="arch\sh\kernel\cpu\Makefile" />
-    <None Include="arch\sh\kernel\vsyscall\.gitignore" />
     <None Include="arch\sh\kernel\vsyscall\Makefile" />
-    <None Include="arch\sh\kernel\.gitignore" />
     <None Include="arch\sh\kernel\Makefile" />
     <None Include="arch\sh\lib\Makefile" />
     <None Include="arch\sh\lib64\Makefile" />
@@ -35883,12 +35859,10 @@
     <None Include="arch\sh\Kconfig.cpu" />
     <None Include="arch\sh\Kconfig.debug" />
     <None Include="arch\sh\Makefile" />
-    <None Include="arch\sparc\boot\.gitignore" />
     <None Include="arch\sparc\boot\Makefile" />
     <None Include="arch\sparc\configs\sparc32_defconfig" />
     <None Include="arch\sparc\configs\sparc64_defconfig" />
     <None Include="arch\sparc\include\asm\Kbuild" />
-    <None Include="arch\sparc\kernel\.gitignore" />
     <None Include="arch\sparc\kernel\Makefile" />
     <None Include="arch\sparc\lib\COPYING.LIB" />
     <None Include="arch\sparc\lib\Makefile" />
@@ -35924,7 +35898,6 @@
     <None Include="arch\um\sys-ia64\Makefile" />
     <None Include="arch\um\sys-ppc\Makefile" />
     <None Include="arch\um\sys-x86_64\Makefile" />
-    <None Include="arch\um\.gitignore" />
     <None Include="arch\um\defconfig" />
     <None Include="arch\um\Kconfig.char" />
     <None Include="arch\um\Kconfig.common" />
@@ -35950,14 +35923,10 @@
     <None Include="arch\unicore32\lib\Makefile" />
     <None Include="arch\unicore32\mm\Kconfig" />
     <None Include="arch\unicore32\mm\Makefile" />
-    <None Include="arch\unicore32\.gitignore" />
     <None Include="arch\unicore32\Kconfig" />
     <None Include="arch\unicore32\Kconfig.debug" />
     <None Include="arch\unicore32\Makefile" />
-    <None Include="arch\x86\boot\compressed\.gitignore" />
     <None Include="arch\x86\boot\compressed\Makefile" />
-    <None Include="arch\x86\boot\tools\.gitignore" />
-    <None Include="arch\x86\boot\.gitignore" />
     <None Include="arch\x86\boot\install.sh" />
     <None Include="arch\x86\boot\Makefile" />
     <None Include="arch\x86\boot\mtools.conf.in" />
@@ -35967,7 +35936,6 @@
     <None Include="arch\x86\crypto\Makefile" />
     <None Include="arch\x86\ia32\Makefile" />
     <None Include="arch\x86\include\asm\Kbuild" />
-    <None Include="arch\x86\kernel\acpi\realmode\.gitignore" />
     <None Include="arch\x86\kernel\acpi\realmode\Makefile" />
     <None Include="arch\x86\kernel\acpi\Makefile" />
     <None Include="arch\x86\kernel\apic\Makefile" />
@@ -35975,17 +35943,14 @@
     <None Include="arch\x86\kernel\cpu\cpufreq\Makefile" />
     <None Include="arch\x86\kernel\cpu\mcheck\Makefile" />
     <None Include="arch\x86\kernel\cpu\mtrr\Makefile" />
-    <None Include="arch\x86\kernel\cpu\.gitignore" />
     <None Include="arch\x86\kernel\cpu\Makefile" />
     <None Include="arch\x86\kernel\cpu\mkcapflags.pl" />
     <None Include="arch\x86\kernel\.asm-offsets.s.cmd" />
-    <None Include="arch\x86\kernel\.gitignore" />
     <None Include="arch\x86\kernel\Makefile" />
     <None Include="arch\x86\kvm\Kconfig" />
     <None Include="arch\x86\kvm\Makefile" />
     <None Include="arch\x86\lguest\Kconfig" />
     <None Include="arch\x86\lguest\Makefile" />
-    <None Include="arch\x86\lib\.gitignore" />
     <None Include="arch\x86\lib\Makefile" />
     <None Include="arch\x86\lib\x86-opcode-map.txt" />
     <None Include="arch\x86\math-emu\Makefile" />
@@ -36010,14 +35975,11 @@
     <None Include="arch\x86\tools\distill.awk" />
     <None Include="arch\x86\tools\gen-insn-attr-x86.awk" />
     <None Include="arch\x86\tools\Makefile" />
-    <None Include="arch\x86\vdso\vdso32\.gitignore" />
-    <None Include="arch\x86\vdso\.gitignore" />
     <None Include="arch\x86\vdso\checkundef.sh" />
     <None Include="arch\x86\vdso\Makefile" />
     <None Include="arch\x86\video\Makefile" />
     <None Include="arch\x86\xen\Kconfig" />
     <None Include="arch\x86\xen\Makefile" />
-    <None Include="arch\x86\.gitignore" />
     <None Include="arch\x86\Kbuild" />
     <None Include="arch\x86\Kconfig" />
     <None Include="arch\x86\Kconfig.cpu" />
@@ -36044,7 +36006,6 @@
     <None Include="arch\xtensa\Kconfig" />
     <None Include="arch\xtensa\Kconfig.debug" />
     <None Include="arch\xtensa\Makefile" />
-    <None Include="arch\.gitignore" />
     <None Include="arch\Kconfig" />
     <None Include="block\Kconfig" />
     <None Include="block\Kconfig.iosched" />
@@ -36150,7 +36111,6 @@
     <None Include="Documentation\ABI\testing\sysfs-wacom" />
     <None Include="Documentation\ABI\testing\sysfs-wusb_cbaf" />
     <None Include="Documentation\ABI\README" />
-    <None Include="Documentation\accounting\.gitignore" />
     <None Include="Documentation\accounting\cgroupstats.txt" />
     <None Include="Documentation\accounting\delay-accounting.txt" />
     <None Include="Documentation\accounting\Makefile" />
@@ -36228,7 +36188,6 @@
     <None Include="Documentation\arm\Setup" />
     <None Include="Documentation\arm\swp_emulation" />
     <None Include="Documentation\arm\tcm.txt" />
-    <None Include="Documentation\auxdisplay\.gitignore" />
     <None Include="Documentation\auxdisplay\cfag12864b" />
     <None Include="Documentation\auxdisplay\ks0108" />
     <None Include="Documentation\auxdisplay\Makefile" />
@@ -36279,7 +36238,6 @@
     <None Include="Documentation\cgroups\memcg_test.txt" />
     <None Include="Documentation\cgroups\memory.txt" />
     <None Include="Documentation\cgroups\resource_counter.txt" />
-    <None Include="Documentation\connector\.gitignore" />
     <None Include="Documentation\connector\connector.txt" />
     <None Include="Documentation\connector\Makefile" />
     <None Include="Documentation\console\console.txt" />
@@ -36397,7 +36355,6 @@
     <None Include="Documentation\devicetree\bindings\xilinx.txt" />
     <None Include="Documentation\devicetree\00-INDEX" />
     <None Include="Documentation\devicetree\booting-without-of.txt" />
-    <None Include="Documentation\DocBook\dvb\.gitignore" />
     <None Include="Documentation\DocBook\dvb\audio.xml" />
     <None Include="Documentation\DocBook\dvb\ca.xml" />
     <None Include="Documentation\DocBook\dvb\demux.xml" />
@@ -36412,7 +36369,6 @@
     <None Include="Documentation\DocBook\dvb\kdapi.xml" />
     <None Include="Documentation\DocBook\dvb\net.xml" />
     <None Include="Documentation\DocBook\dvb\video.xml" />
-    <None Include="Documentation\DocBook\v4l\.gitignore" />
     <None Include="Documentation\DocBook\v4l\bayer.pdf" />
     <None Include="Documentation\DocBook\v4l\bayer.png" />
     <None Include="Documentation\DocBook\v4l\biblio.xml" />
@@ -36558,7 +36514,6 @@
     <None Include="Documentation\DocBook\v4l\vidioc-subdev-g-fmt.xml" />
     <None Include="Documentation\DocBook\v4l\vidioc-subdev-g-frame-interval.xml" />
     <None Include="Documentation\DocBook\v4l\vidioc-subscribe-event.xml" />
-    <None Include="Documentation\DocBook\.gitignore" />
     <None Include="Documentation\DocBook\80211.tmpl" />
     <None Include="Documentation\DocBook\alsa-driver-api.tmpl" />
     <None Include="Documentation\DocBook\debugobjects.tmpl" />
@@ -36882,7 +36837,6 @@
     <None Include="Documentation\i2c\writing-clients" />
     <None Include="Documentation\i2o\ioctl" />
     <None Include="Documentation\i2o\README" />
-    <None Include="Documentation\ia64\.gitignore" />
     <None Include="Documentation\ia64\aliasing.txt" />
     <None Include="Documentation\ia64\efirtc.txt" />
     <None Include="Documentation\ia64\err_inject.txt" />
@@ -37001,7 +36955,6 @@
     <None Include="Documentation\leds\leds-lp3944.txt" />
     <None Include="Documentation\leds\leds-lp5521.txt" />
     <None Include="Documentation\leds\leds-lp5523.txt" />
-    <None Include="Documentation\lguest\.gitignore" />
     <None Include="Documentation\lguest\extract" />
     <None Include="Documentation\lguest\lguest.txt" />
     <None Include="Documentation\lguest\Makefile" />
@@ -37038,9 +36991,7 @@
     <None Include="Documentation\networking\mac80211_hwsim\hostapd.conf" />
     <None Include="Documentation\networking\mac80211_hwsim\README" />
     <None Include="Documentation\networking\mac80211_hwsim\wpa_supplicant.conf" />
-    <None Include="Documentation\networking\timestamping\.gitignore" />
     <None Include="Documentation\networking\timestamping\Makefile" />
-    <None Include="Documentation\networking\.gitignore" />
     <None Include="Documentation\networking\00-INDEX" />
     <None Include="Documentation\networking\3c359.txt" />
     <None Include="Documentation\networking\3c505.txt" />
@@ -37164,7 +37115,6 @@
     <None Include="Documentation\PCI\PCIEBUS-HOWTO.txt" />
     <None Include="Documentation\PCI\pci-error-recovery.txt" />
     <None Include="Documentation\PCI\pci-iov-howto.txt" />
-    <None Include="Documentation\pcmcia\.gitignore" />
     <None Include="Documentation\pcmcia\devicetable.txt" />
     <None Include="Documentation\pcmcia\driver.txt" />
     <None Include="Documentation\pcmcia\driver-changes.txt" />
@@ -37375,7 +37325,6 @@
     <None Include="Documentation\sound\oss\vwsnd" />
     <None Include="Documentation\sound\oss\WaveArtist" />
     <None Include="Documentation\sparc\README-2.5" />
-    <None Include="Documentation\spi\.gitignore" />
     <None Include="Documentation\spi\butterfly" />
     <None Include="Documentation\spi\ep93xx_spi" />
     <None Include="Documentation\spi\Makefile" />
@@ -37475,7 +37424,6 @@
     <None Include="Documentation\video4linux\cx2341x\README.hm12" />
     <None Include="Documentation\video4linux\cx2341x\README.vbi" />
     <None Include="Documentation\video4linux\cx88\hauppauge-wintv-cx88-ir.txt" />
-    <None Include="Documentation\video4linux\.gitignore" />
     <None Include="Documentation\video4linux\API.html" />
     <None Include="Documentation\video4linux\cafe_ccic" />
     <None Include="Documentation\video4linux\CARDLIST.au0828" />
@@ -37526,7 +37474,6 @@
     <None Include="Documentation\video4linux\zc0301.txt" />
     <None Include="Documentation\video4linux\Zoran" />
     <None Include="Documentation\video4linux\zr364xx.txt" />
-    <None Include="Documentation\vm\.gitignore" />
     <None Include="Documentation\vm\00-INDEX" />
     <None Include="Documentation\vm\active_mm.txt" />
     <None Include="Documentation\vm\balance" />
@@ -37556,7 +37503,6 @@
     <None Include="Documentation\w1\00-INDEX" />
     <None Include="Documentation\w1\w1.generic" />
     <None Include="Documentation\w1\w1.netlink" />
-    <None Include="Documentation\watchdog\src\.gitignore" />
     <None Include="Documentation\watchdog\src\Makefile" />
     <None Include="Documentation\watchdog\00-INDEX" />
     <None Include="Documentation\watchdog\hpwdt.txt" />
@@ -37595,7 +37541,6 @@
     <None Include="Documentation\zh_CN\SubmittingDrivers" />
     <None Include="Documentation\zh_CN\SubmittingPatches" />
     <None Include="Documentation\zh_CN\volatile-considered-harmful.txt" />
-    <None Include="Documentation\.gitignore" />
     <None Include="Documentation\00-INDEX" />
     <None Include="Documentation\apparmor.txt" />
     <None Include="Documentation\applying-patches.txt" />
@@ -37741,7 +37686,6 @@
     <None Include="drivers\amba\Makefile" />
     <None Include="drivers\ata\Kconfig" />
     <None Include="drivers\ata\Makefile" />
-    <None Include="drivers\atm\.gitignore" />
     <None Include="drivers\atm\Kconfig" />
     <None Include="drivers\atm\Makefile" />
     <None Include="drivers\atm\nicstarmac.copyright" />
@@ -37800,7 +37744,6 @@
     <None Include="drivers\dma\Makefile" />
     <None Include="drivers\edac\Kconfig" />
     <None Include="drivers\edac\Makefile" />
-    <None Include="drivers\eisa\.gitignore" />
     <None Include="drivers\eisa\eisa.ids" />
     <None Include="drivers\eisa\Kconfig" />
     <None Include="drivers\eisa\Makefile" />
@@ -37827,7 +37770,6 @@
     <None Include="drivers\gpu\drm\radeon\reg_srcs\rn50" />
     <None Include="drivers\gpu\drm\radeon\reg_srcs\rs600" />
     <None Include="drivers\gpu\drm\radeon\reg_srcs\rv515" />
-    <None Include="drivers\gpu\drm\radeon\.gitignore" />
     <None Include="drivers\gpu\drm\radeon\Kconfig" />
     <None Include="drivers\gpu\drm\radeon\Makefile" />
     <None Include="drivers\gpu\drm\savage\Makefile" />
@@ -38205,7 +38147,6 @@
     <None Include="drivers\net\vmxnet3\Makefile" />
     <None Include="drivers\net\vxge\Makefile" />
     <None Include="drivers\net\wan\lmc\Makefile" />
-    <None Include="drivers\net\wan\.gitignore" />
     <None Include="drivers\net\wan\Kconfig" />
     <None Include="drivers\net\wan\Makefile" />
     <None Include="drivers\net\wan\wanxlfw.inc_shipped" />
@@ -38289,7 +38230,6 @@
     <None Include="drivers\pci\pcie\aer\Makefile" />
     <None Include="drivers\pci\pcie\Kconfig" />
     <None Include="drivers\pci\pcie\Makefile" />
-    <None Include="drivers\pci\.gitignore" />
     <None Include="drivers\pci\Kconfig" />
     <None Include="drivers\pci\Makefile" />
     <None Include="drivers\pcmcia\Kconfig" />
@@ -38345,7 +38285,6 @@
     <None Include="drivers\scsi\aic7xxx\aicasm\aicasm_macro_scan.l" />
     <None Include="drivers\scsi\aic7xxx\aicasm\aicasm_scan.l" />
     <None Include="drivers\scsi\aic7xxx\aicasm\Makefile" />
-    <None Include="drivers\scsi\aic7xxx\.gitignore" />
     <None Include="drivers\scsi\aic7xxx\aic79xx.reg" />
     <None Include="drivers\scsi\aic7xxx\aic79xx.seq" />
     <None Include="drivers\scsi\aic7xxx\aic79xx_reg.h_shipped" />
@@ -38404,7 +38343,6 @@
     <None Include="drivers\scsi\qla4xxx\Kconfig" />
     <None Include="drivers\scsi\qla4xxx\Makefile" />
     <None Include="drivers\scsi\sym53c8xx_2\Makefile" />
-    <None Include="drivers\scsi\.gitignore" />
     <None Include="drivers\scsi\53c700.scr" />
     <None Include="drivers\scsi\53c700_d.h_shipped" />
     <None Include="drivers\scsi\Kconfig" />
@@ -38723,7 +38661,6 @@
     <None Include="drivers\tty\serial\jsm\Makefile" />
     <None Include="drivers\tty\serial\Kconfig" />
     <None Include="drivers\tty\serial\Makefile" />
-    <None Include="drivers\tty\vt\.gitignore" />
     <None Include="drivers\tty\vt\cp437.uni" />
     <None Include="drivers\tty\vt\defkeymap.c_shipped" />
     <None Include="drivers\tty\vt\defkeymap.map" />
@@ -38787,7 +38724,6 @@
     <None Include="drivers\video\i810\Makefile" />
     <None Include="drivers\video\intelfb\Makefile" />
     <None Include="drivers\video\kyro\Makefile" />
-    <None Include="drivers\video\logo\.gitignore" />
     <None Include="drivers\video\logo\clut_vga16.ppm" />
     <None Include="drivers\video\logo\Kconfig" />
     <None Include="drivers\video\logo\logo_blackfin_clut224.ppm" />
@@ -38845,7 +38781,6 @@
     <None Include="drivers\xen\xenfs\Makefile" />
     <None Include="drivers\xen\Kconfig" />
     <None Include="drivers\xen\Makefile" />
-    <None Include="drivers\zorro\.gitignore" />
     <None Include="drivers\zorro\Kconfig" />
     <None Include="drivers\zorro\Makefile" />
     <None Include="drivers\zorro\zorro.ids" />
@@ -38870,7 +38805,6 @@
     <None Include="firmware\bnx2x\bnx2x-e1-6.2.5.0.fw.ihex" />
     <None Include="firmware\bnx2x\bnx2x-e1h-6.2.5.0.fw.ihex" />
     <None Include="firmware\bnx2x\bnx2x-e2-6.2.5.0.fw.ihex" />
-    <None Include="firmware\cis\.gitignore" />
     <None Include="firmware\cis\3CCFEM556.cis.ihex" />
     <None Include="firmware\cis\3CXEM556.cis.ihex" />
     <None Include="firmware\cis\COMpad2.cis.ihex" />
@@ -38988,7 +38922,6 @@
     <None Include="firmware\yamaha\ds1_dsp.fw.ihex" />
     <None Include="firmware\yamaha\ds1e_ctrl.fw.ihex" />
     <None Include="firmware\yamaha\yss225_registers.bin.ihex" />
-    <None Include="firmware\.gitignore" />
     <None Include="firmware\atmsar11.HEX" />
     <None Include="firmware\intelliport2.bin.ihex" />
     <None Include="firmware\Makefile" />
@@ -39196,7 +39129,6 @@
     <None Include="init\Kconfig" />
     <None Include="init\Makefile" />
     <None Include="ipc\Makefile" />
-    <None Include="kernel\debug\kdb\.gitignore" />
     <None Include="kernel\debug\kdb\kdb_cmds" />
     <None Include="kernel\debug\kdb\Makefile" />
     <None Include="kernel\debug\Makefile" />
@@ -39211,7 +39143,6 @@
     <None Include="kernel\trace\Kconfig" />
     <None Include="kernel\trace\Makefile" />
     <None Include="kernel\.bounds.s.cmd" />
-    <None Include="kernel\.gitignore" />
     <None Include="kernel\Kconfig.freezer" />
     <None Include="kernel\Kconfig.hz" />
     <None Include="kernel\Kconfig.locks" />
@@ -39220,7 +39151,6 @@
     <None Include="kernel\timeconst.pl" />
     <None Include="lib\lzo\Makefile" />
     <None Include="lib\raid6\test\Makefile" />
-    <None Include="lib\raid6\.gitignore" />
     <None Include="lib\raid6\altivec.uc" />
     <None Include="lib\raid6\int.uc" />
     <None Include="lib\raid6\Makefile" />
@@ -39230,7 +39160,6 @@
     <None Include="lib\xz\Makefile" />
     <None Include="lib\zlib_deflate\Makefile" />
     <None Include="lib\zlib_inflate\Makefile" />
-    <None Include="lib\.gitignore" />
     <None Include="lib\Kconfig" />
     <None Include="lib\Kconfig.debug" />
     <None Include="lib\Kconfig.kgdb" />
@@ -39361,7 +39290,6 @@
     <None Include="net\wanrouter\patchlevel" />
     <None Include="net\wimax\Kconfig" />
     <None Include="net\wimax\Makefile" />
-    <None Include="net\wireless\.gitignore" />
     <None Include="net\wireless\db.txt" />
     <None Include="net\wireless\genregdb.awk" />
     <None Include="net\wireless\Kconfig" />
@@ -39384,7 +39312,6 @@
     <None Include="samples\Makefile" />
     <None Include="scripts\basic\.docproc.cmd" />
     <None Include="scripts\basic\.fixdep.cmd" />
-    <None Include="scripts\basic\.gitignore" />
     <None Include="scripts\basic\docproc" />
     <None Include="scripts\basic\fixdep" />
     <None Include="scripts\basic\Makefile" />
@@ -39411,7 +39338,6 @@
     <None Include="scripts\coccinelle\tests\doublebitand.cocci" />
     <None Include="scripts\coccinelle\tests\doubletest.cocci" />
     <None Include="scripts\dtc\libfdt\Makefile.libfdt" />
-    <None Include="scripts\dtc\.gitignore" />
     <None Include="scripts\dtc\dtc-lexer.l" />
     <None Include="scripts\dtc\dtc-lexer.lex.c_shipped" />
     <None Include="scripts\dtc\dtc-parser.tab.c_shipped" />
@@ -39421,7 +39347,6 @@
     <None Include="scripts\dtc\Makefile.dtc" />
     <None Include="scripts\genksyms\.genksyms.cmd" />
     <None Include="scripts\genksyms\.genksyms.o.cmd" />
-    <None Include="scripts\genksyms\.gitignore" />
     <None Include="scripts\genksyms\.lex.o.cmd" />
     <None Include="scripts\genksyms\.parse.o.cmd" />
     <None Include="scripts\genksyms\genksyms" />
@@ -39437,7 +39362,6 @@
     <None Include="scripts\genksyms\parse.o" />
     <None Include="scripts\genksyms\parse.y" />
     <None Include="scripts\kconfig\lxdialog\.checklist.o.cmd" />
-    <None Include="scripts\kconfig\lxdialog\.gitignore" />
     <None Include="scripts\kconfig\lxdialog\.inputbox.o.cmd" />
     <None Include="scripts\kconfig\lxdialog\.menubox.o.cmd" />
     <None Include="scripts\kconfig\lxdialog\.textbox.o.cmd" />
@@ -39453,7 +39377,6 @@
     <None Include="scripts\kconfig\lxdialog\yesno.o" />
     <None Include="scripts\kconfig\.conf.cmd" />
     <None Include="scripts\kconfig\.conf.o.cmd" />
-    <None Include="scripts\kconfig\.gitignore" />
     <None Include="scripts\kconfig\.kxgettext.o.cmd" />
     <None Include="scripts\kconfig\.mconf.cmd" />
     <None Include="scripts\kconfig\.mconf.o.cmd" />
@@ -39480,7 +39403,6 @@
     <None Include="scripts\mod\.elfconfig.h.cmd" />
     <None Include="scripts\mod\.empty.o.cmd" />
     <None Include="scripts\mod\.file2alias.o.cmd" />
-    <None Include="scripts\mod\.gitignore" />
     <None Include="scripts\mod\.mk_elfconfig.cmd" />
     <None Include="scripts\mod\.modpost.cmd" />
     <None Include="scripts\mod\.modpost.o.cmd" />
@@ -39512,10 +39434,8 @@
     <None Include="scripts\rt-tester\t5-l4-pi-boost-deboost.tst" />
     <None Include="scripts\rt-tester\t5-l4-pi-boost-deboost-setsched.tst" />
     <None Include="scripts\selinux\genheaders\.genheaders.cmd" />
-    <None Include="scripts\selinux\genheaders\.gitignore" />
     <None Include="scripts\selinux\genheaders\genheaders" />
     <None Include="scripts\selinux\genheaders\Makefile" />
-    <None Include="scripts\selinux\mdp\.gitignore" />
     <None Include="scripts\selinux\mdp\.mdp.cmd" />
     <None Include="scripts\selinux\mdp\dbus_contexts" />
     <None Include="scripts\selinux\mdp\Makefile" />
@@ -39525,7 +39445,6 @@
     <None Include="scripts\selinux\README" />
     <None Include="scripts\tracing\draw_functrace.py" />
     <None Include="scripts\.conmakehash.cmd" />
-    <None Include="scripts\.gitignore" />
     <None Include="scripts\.kallsyms.cmd" />
     <None Include="scripts\.pnmtologo.cmd" />
     <None Include="scripts\.recordmcount.cmd" />
@@ -39591,13 +39510,11 @@
     <None Include="scripts\tags.sh" />
     <None Include="scripts\ver_linux" />
     <None Include="scripts\xz_wrap.sh" />
-    <None Include="security\apparmor\.gitignore" />
     <None Include="security\apparmor\Kconfig" />
     <None Include="security\apparmor\Makefile" />
     <None Include="security\integrity\ima\Kconfig" />
     <None Include="security\integrity\ima\Makefile" />
     <None Include="security\keys\Makefile" />
-    <None Include="security\selinux\.gitignore" />
     <None Include="security\selinux\Kconfig" />
     <None Include="security\selinux\Makefile" />
     <None Include="security\smack\Kconfig" />
@@ -39654,7 +39571,6 @@
     <None Include="sound\mips\Makefile" />
     <None Include="sound\oss\dmasound\Kconfig" />
     <None Include="sound\oss\dmasound\Makefile" />
-    <None Include="sound\oss\.gitignore" />
     <None Include="sound\oss\CHANGELOG" />
     <None Include="sound\oss\Kconfig" />
     <None Include="sound\oss\Makefile" />
@@ -39847,7 +39763,6 @@
     <None Include="tools\perf\util\generate-cmdlist.sh" />
     <None Include="tools\perf\util\PERF-VERSION-GEN" />
     <None Include="tools\perf\util\setup.py" />
-    <None Include="tools\perf\.gitignore" />
     <None Include="tools\perf\command-list.txt" />
     <None Include="tools\perf\CREDITS" />
     <None Include="tools\perf\design.txt" />
@@ -39866,10 +39781,10 @@
     <None Include="tools\usb\Makefile" />
     <None Include="tools\virtio\vhost_test\Makefile" />
     <None Include="tools\virtio\Makefile" />
-    <None Include="usr\.gitignore" />
     <None Include="usr\Kconfig" />
     <None Include="usr\Makefile" />
     <None Include="virt\kvm\Kconfig" />
+
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
